@@ -26,4 +26,9 @@ class HomeController extends Controller
         $data = ["title" => "Dashboard"];
         return view('pages.dashboard', $data);
     }
+
+    public function transaksi() {
+        $data = ["title" => "Transaksi"];
+        return view('pages.transaksi', $data);
+    }
 }

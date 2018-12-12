@@ -16,6 +16,7 @@ Auth::routes();
 
 Route::middleware('auth')->group(function() {
 	Route::get('/', 'HomeController@index');
+	Route::get('/transaksi', 'HomeController@transaksi');
 	Route::view('/dashboard', 'pages.dashboard');
 	// Section CoreUI elements
 	Route::view('/sample/dashboard','samples.dashboard');
