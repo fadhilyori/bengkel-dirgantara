@@ -1,17 +1,29 @@
 <div class="sidebar">
-  <nav class="sidebar-nav">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/"><i class="icon-speedometer"></i> Dashboard </a>
-      </li>
+    <nav class="sidebar-nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="icon-speedometer"></i> Dashboard </a>
+            </li>
 
-      <li class="nav-title">
-        UI Elements
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/sample/dashboard"><i class="icon-calculator"></i> Samples</a>
-      </li>
-    </ul>
-  </nav>
-  <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="icon-user"></i> Absensi </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="icon-list"></i> Transaksi </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="icon-puzzle"></i> Job </a>
+            </li>
+
+            <li class="nav-title">
+                About
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/"><i class="icon-calculator"></i> Version</a>
+            </li>
+        </ul>
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>

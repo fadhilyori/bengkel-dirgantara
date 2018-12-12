@@ -14,7 +14,7 @@
     </li> 
     --}}
     <li class="nav-item px-3">
-      <a class="nav-link" href="/sample/dashboard">Samples</a>
+      <a class="nav-link" href="">{{ $title OR "TITLE" }}</a>
     </li>
   </ul>
   <ul class="nav navbar-nav ml-auto">
