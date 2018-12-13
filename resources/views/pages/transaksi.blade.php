@@ -12,56 +12,58 @@
                   <table class="table table-responsive-sm table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Username</th>
-                        <th>Date registered</th>
-                        <th>Role</th>
-                        <th>Status</th>
+                        <th>Nama Job</th>
+                        <th>Montir</th>
+                        <th>Pelanggan</th>
+                        <th>Jenis kendaraan</th>
+                        <th>Tagihan</th>
+                        <th>Opsi</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Vishnu Serghei</td>
-                        <td>2012/01/01</td>
-                        <td>Member</td>
-                        <td>
-                          <span class="badge badge-success">Active</span>
-                        </td>
+                        <td>Ganti oli</td>
+                        <td>Imam Abu Mansur</td>
+                        <td>Anas</td>
+                        <td>Honda Supra X</td>
+                        <td align="right">Rp95.000</td>
+                        <td><a class="btn btn-primary" href="/transaksi/1"><span class="icon icon-eye"></span></a></td>
                       </tr>
                       <tr>
-                        <td>Zbyněk Phoibos</td>
-                        <td>2012/02/01</td>
-                        <td>Staff</td>
-                        <td>
-                          <span class="badge badge-danger">Banned</span>
-                        </td>
+                        <td>Ganti ban</td>
+                        <td>Andre Tenosel</td>
+                        <td>Abid</td>
+                        <td>Honda Vario 125</td>
+                        <td align="right">Rp204.000</td>
+                        <td><a class="btn btn-primary" href="/transaksi/2"><span class="icon icon-eye"></span></a></td>
                       </tr>
                       <tr>
-                        <td>Einar Randall</td>
-                        <td>2012/02/01</td>
-                        <td>Admin</td>
-                        <td>
-                          <span class="badge badge-secondary">Inactive</span>
-                        </td>
+                        <td>Perbaikan rem</td>
+                        <td>Andre Tenosel</td>
+                        <td>Andy</td>
+                        <td>Honda Supra 110</td>
+                        <td align="right">Rp65.000</td>
+                        <td><a class="btn btn-primary" href="/transaksi/3"><span class="icon icon-eye"></span></a></td>
                       </tr>
                       <tr>
-                        <td>Félix Troels</td>
-                        <td>2012/03/01</td>
-                        <td>Member</td>
-                        <td>
-                          <span class="badge badge-warning">Pending</span>
-                        </td>
+                        <td>Perbaikan kelistrikan sepeda motor</td>
+                        <td>Fadhil Yori Hibatullah</td>
+                        <td>Alfi</td>
+                        <td>Honda Vario 110</td>
+                        <td align="right">Rp110.000</td>
+                        <td><a class="btn btn-primary" href="/transaksi/4"><span class="icon icon-eye"></span></a></td>
                       </tr>
                       <tr>
-                        <td>Aulus Agmundr</td>
-                        <td>2012/01/21</td>
-                        <td>Staff</td>
-                        <td>
-                          <span class="badge badge-success">Active</span>
-                        </td>
+                        <td>Pengecekan dan perbaikan mesin sepeda motor</td>
+                        <td>Kintan Asfiaranti</td>
+                        <td>Nuel</td>
+                        <td>Honda Supra 110</td>
+                        <td align="right">Rp95.000</td>
+                        <td><a class="btn btn-primary" href="/transaksi/5"><span class="icon icon-eye"></span></a></td>
                       </tr>
                     </tbody>
                   </table>
-                  <nav>
+                  <!-- <nav>
                     <ul class="pagination">
                       <li class="page-item"><a class="page-link" href="#">Prev</a></li>
                       <li class="page-item active">
@@ -72,7 +74,7 @@
                       <li class="page-item"><a class="page-link" href="#">4</a></li>
                       <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
-                  </nav>
+                  </nav> -->
                 </div>
               </div>
             </div>

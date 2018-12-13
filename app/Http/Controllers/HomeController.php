@@ -31,4 +31,31 @@ class HomeController extends Controller
         $data = ["title" => "Transaksi"];
         return view('pages.transaksi', $data);
     }
+
+    public function absensi() {
+        $data = ["title" => "Absensi"];
+        return view('pages.absensi', $data);
+    }
+
+    public function job() {
+        $data = ["title" => "Job"];
+        return view('pages.job', $data);
+    }
+
+    public function detailTransaksi(Request $request) {
+        $id = $request->id;
+        if ($id == "1") {
+            $data = [
+                "customer" => "Anas",
+                "job" => "Ganti oli",
+                "kendaraan" => "Honda Supra X",
+                "total_price" => "95000",
+                "discount" => "0",
+                "tax" => "10",
+                "bill_of_service" => "AAI87ANJS",
+                'montir'=>'Imam Abu Mansur' 
+            ];
+        }
+        return view('pages.detailTransaksi',$data);
+    }
 }
