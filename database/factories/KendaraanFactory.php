@@ -1,8 +1,8 @@
 <?php
 
-use Faker\Generator as Faker;
+    use Faker\Generator as Faker;
 
-$factory->define(\App\Kendaraan::class, function (Faker $faker) {
+    $factory->define(\App\Kendaraan::class, function (Faker $faker) {
     $warna = \App\Warna::all()->pluck('id')->toArray();
     $type = \App\TypeKendaraan::all()->pluck('id')->toArray();
     $model = \App\ModelKendaraan::all()->pluck('id')->toArray();

@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(\App\Absensi::class, function (Faker $faker) {
+    $factory->define(\App\Absensi::class, function (Faker $faker) {
     $pegawai = \App\Pegawai::all()->pluck('id')->toArray();
     $branch = \App\Branch::all()->pluck('id')->toArray();
     return [
