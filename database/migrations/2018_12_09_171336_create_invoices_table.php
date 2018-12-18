@@ -23,6 +23,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedInteger('customer_id');
             $table->unsignedInteger('jobs_id');
             $table->unsignedInteger('kendaraan_id');
+            $table->unsignedInteger('branch_id');
             $table->timestamps();
         });
     }

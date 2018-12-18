@@ -11,6 +11,6 @@ class KendaraanSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Kendaraan::class, 1000)->create();
+        factory(\App\Kendaraan::class, 500)->create();
     }
 }

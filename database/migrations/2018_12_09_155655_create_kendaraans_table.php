@@ -20,7 +20,7 @@ class CreateKendaraansTable extends Migration
             $table->string('license');
             $table->unsignedInteger('warna_id');
             $table->unsignedInteger('type_kendaraan_id');
-            $table->unsignedInteger('model_kendaraan_id');
+            $table->unsignedInteger('model_kendaraan_id')->nullable();
             $table->unsignedInteger('customer_id');
             $table->timestamps();
         });

@@ -9,7 +9,7 @@ class Invoice extends Model
     protected $table = 'invoices';
 
     protected $fillable = [
-        'total_prize', 'discount', 'tax', 'bill_of_service', 'date', 'customer_id', 'jobs_id', 'kendaraan_id'
+        'total_prize', 'discount', 'tax', 'bill_of_service', 'date', 'customer_id', 'jobs_id', 'kendaraan_id', 'branch_id'
     ];
 
     public function customer()
@@ -30,5 +30,10 @@ class Invoice extends Model
     public function history()
     {
         return $this->hasMany(HistoryJob::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
     }
 }

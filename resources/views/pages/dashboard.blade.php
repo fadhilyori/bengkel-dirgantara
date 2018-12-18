@@ -92,97 +92,113 @@
         $(function () {
             'use strict';
 
-            //convert Hex to RGBA
-            function convertHex(hex, opacity) {
-                hex = hex.replace('#', '');
-                var r = parseInt(hex.substring(0, 2), 16);
-                var g = parseInt(hex.substring(2, 4), 16);
-                var b = parseInt(hex.substring(4, 6), 16);
+            $.getJSON("http://localhost:8000/api/branch", function(data) {
+                // console.log(data.data[0].name);
+                var tempData = data.data;
 
-                var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
-                return result;
-            }
+                //convert Hex to RGBA
+                function convertHex(hex, opacity) {
+                    hex = hex.replace('#', '');
+                    var r = parseInt(hex.substring(0, 2), 16);
+                    var g = parseInt(hex.substring(2, 4), 16);
+                    var b = parseInt(hex.substring(4, 6), 16);
 
-            function random(min,max) {
-                return Math.floor(Math.random()*(max-min+1)+min);
-            }
+                    var result = 'rgba(' + r + ',' + g + ',' + b + ',' + opacity / 100 + ')';
+                    return result;
+                }
 
-            var elements = 27;
-            var data1 = [];
-            var data2 = [];
-            var data3 = [];
+                function random(min,max) {
+                    return Math.floor(Math.random()*(max-min+1)+min);
+                }
 
-            for (var i = 0; i <= elements; i++) {
-                data1.push(random(50,200));
-                data2.push(random(80,100));
-                data3.push(65);
-            }
+                var elements = 27;
+                var data1 = [];
+                var data2 = [];
+                var data3 = [];
+                var data4 = [];
 
-            var data = {
-                labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'],
-                datasets: [
-                    {
-                        label: 'My First dataset',
-                        backgroundColor: convertHex($.brandInfo,10),
-                        borderColor: $.brandInfo,
-                        pointHoverBackgroundColor: '#fff',
-                        borderWidth: 2,
-                        data: data1
-                    },
-                    {
-                        label: 'My Second dataset',
-                        backgroundColor: 'transparent',
-                        borderColor: $.brandSuccess,
-                        pointHoverBackgroundColor: '#fff',
-                        borderWidth: 2,
-                        data: data2
-                    },
-                    {
-                        label: 'My Third dataset',
-                        backgroundColor: 'transparent',
-                        borderColor: $.brandDanger,
-                        pointHoverBackgroundColor: '#fff',
-                        borderWidth: 1,
-                        borderDash: [8, 5],
-                        data: data3
-                    }
-                ]
-            };
+                for (var i = 0; i <= elements; i++) {
+                    data1.push(random(50,200));
+                    data2.push(random(80,100));
+                    data3.push(65);
+                    data4.push(random(30,100));
+                }
 
-            var options = {
-                maintainAspectRatio: false,
-                legend: {
-                    display: false
-                },
-                scales: {
-                    xAxes: [{
-                        gridLines: {
-                            drawOnChartArea: false,
+                var data = {
+                    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                    datasets: [
+                        {
+                            label: tempData[0].name,
+                            backgroundColor: convertHex($.brandInfo,10),
+                            borderColor: '#ff6666',
+                            pointHoverBackgroundColor: '#fff',
+                            borderWidth: 2,
+                            data: data1
+                        },
+                        {
+                            label: tempData[1].name,
+                            backgroundColor: 'transparent',
+                            borderColor: '#9999ff',
+                            pointHoverBackgroundColor: '#fff',
+                            borderWidth: 2,
+                            data: data2
+                        },
+                        {
+                            label: tempData[2].name,
+                            backgroundColor: 'transparent',
+                            borderColor: '#99ffff',
+                            pointHoverBackgroundColor: '#fff',
+                            borderWidth: 1,
+                            borderDash: [8, 5],
+                            data: data3
+                        },
+                        {
+                            label: tempData[3].name,
+                            backgroundColor: 'transparent',
+                            borderColor: '#ffff4d',
+                            pointHoverBackgroundColor: '#fff',
+                            borderWidth: 1,
+                            borderDash: [8, 5],
+                            data: data4
                         }
-                    }],
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            maxTicksLimit: 5,
-                            stepSize: Math.ceil(250 / 5),
-                            max: 250
+                    ]
+                };
+
+                var options = {
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                drawOnChartArea: false,
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                maxTicksLimit: 5,
+                                stepSize: Math.ceil(250 / 5),
+                                max: 250
+                            }
+                        }]
+                    },
+                    elements: {
+                        point: {
+                            radius: 0,
+                            hitRadius: 10,
+                            hoverRadius: 4,
+                            hoverBorderWidth: 3,
                         }
-                    }]
-                },
-                elements: {
-                    point: {
-                        radius: 0,
-                        hitRadius: 10,
-                        hoverRadius: 4,
-                        hoverBorderWidth: 3,
-                    }
-                },
-            };
-            var ctx = $('#main-chart');
-            var mainChart = new Chart(ctx, {
-                type: 'line',
-                data: data,
-                options: options
+                    },
+                };
+                var ctx = $('#main-chart');
+                var mainChart = new Chart(ctx, {
+                    type: 'line',
+                    data: data,
+                    options: options
+                });
             });
         });
     </script>
