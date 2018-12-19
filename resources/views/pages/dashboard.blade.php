@@ -118,19 +118,19 @@
                 var data4 = [];
 
                 for (var i = 0; i <= elements; i++) {
-                    data1.push(random(50,200));
-                    data2.push(random(80,100));
-                    data3.push(65);
-                    data4.push(random(30,100));
+                    data1.push(random(50,110));
+                    data2.push(random(80,160));
+                    data3.push(random(65,140));
+                    data4.push(random(30,90));
                 }
 
                 var data = {
-                    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                    labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
                     datasets: [
                         {
                             label: tempData[0].name,
-                            backgroundColor: convertHex($.brandInfo,10),
-                            borderColor: '#ff6666',
+                            backgroundColor: 'transparent',
+                            borderColor: $.brandInfo,
                             pointHoverBackgroundColor: '#fff',
                             borderWidth: 2,
                             data: data1
@@ -138,7 +138,7 @@
                         {
                             label: tempData[1].name,
                             backgroundColor: 'transparent',
-                            borderColor: '#9999ff',
+                            borderColor: $.brandWarning,
                             pointHoverBackgroundColor: '#fff',
                             borderWidth: 2,
                             data: data2
@@ -146,7 +146,7 @@
                         {
                             label: tempData[2].name,
                             backgroundColor: 'transparent',
-                            borderColor: '#99ffff',
+                            borderColor: $.brandPrimary,
                             pointHoverBackgroundColor: '#fff',
                             borderWidth: 1,
                             borderDash: [8, 5],
@@ -155,7 +155,7 @@
                         {
                             label: tempData[3].name,
                             backgroundColor: 'transparent',
-                            borderColor: '#ffff4d',
+                            borderColor: $.brandDanger,
                             pointHoverBackgroundColor: '#fff',
                             borderWidth: 1,
                             borderDash: [8, 5],

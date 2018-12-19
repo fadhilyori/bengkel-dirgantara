@@ -84,5 +84,11 @@
 @endsection
 
 @section('myscript')
-    <script src="{{ asset('js/views/main.js') }}"></script>
+    <script src="{{ asset('js/views/main.js') }}">
+      $(function () {
+        $.getJSON("http://localhost:8000/api/job", function(data) {
+          // console.log(data.data[0].name);
+          var tempData = data.data;
+      })
+    </script>
 @endsection
